@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details</title>
+    <link
+      rel="shortcut icon"
+      href="./img/Amazon-icon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        text-align: center;
+      }
+      .img {
+        max-width: 100%;
+      }
+      img {
+        min-width: 100px;
+        max-width: 24%;
+      }
+      li {
+        margin: 20px 0;
+        text-align: start;
+      }
+      button {
+        background-color: #ffff;
+        border: 1px solid #d5d9d9;
+        border-radius: 8px;
+        box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 7px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+      #d-lap {
+        display: flex;
+        gap: 10px;
+      }
+      @media (max-width: 960px) {
+        #d-lap {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <div class="container">
+      <section>
+        <h1>Gaming Laptop</h1>
+        <div class="img">
+          <img src="./img/laptop/i1.jpg" alt="" />
+          <img src="./img/laptop/i2.jpg" alt="" />
+          <img src="./img/laptop/i3.jpg" alt="" />
+          <img src="./img/laptop/i4.jpg" alt="" />
+        </div>
+        <hr />
+        <div id="d-lap">
+          <div>
+            <h1>About this item</h1>
+            <ul>
+              <li>
+                <span>
+                  【 RAM &amp; Storage】This computer comes with 8GB RAM DDR5|
+                  512GB SSD
+                </span>
+              </li>
+
+              <li>
+                <span>
+                  【15.6" FHD 144Hz Display 】The 144Hz Full HD 1920x1080
+                  display features adaptive sync to minimize screen tearing,
+                  while playing your favorite games.
+                </span>
+              </li>
+              <li>
+                <span>
+                  【Other Features 】NVIDIA GeForce RTX 2050 graphics, HP Wide
+                  Vision HD Camera, Backlit keyboard with integrated numeric
+                  pad, Windows 11 Home
+                </span>
+              </li>
+              <li>
+                <span>
+                  【Bundle with 64GB USB Flash Drive】Premium, reliable and
+                  secure data storage for your videos, music, photos, or other
+                  files.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <video
+              src="./d-laptop.html"
+              controls
+              autoplay
+              muted
+              width="500px"
+            ></video>
+          </div>
+        </div>
+
+        <a href="./index.html">
+          <button>back to Home</button>
+        </a>
+        <a
+          href="https://www.amazon.com/HP-Victus-GeForce-Backlit-Windows/dp/B0CCXHXZVP/ref=sr_1_1?keywords=gaming+laptops&sr=8-1
+        "
+          ><button>veiw in amazon</button></a
+        >
+      </section>
+    </div>
+  </body>
+</html>

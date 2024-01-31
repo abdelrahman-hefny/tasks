@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details</title>
+    <link rel="shortcut icon" href="./img/Amazon-icon.png" type="image/x-icon">
+
+  </head>
+
+  <body>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      .img {
+        max-width: 100%;
+      }
+
+      img {
+        min-width: 100px;
+        max-width: 24%;
+      }
+
+      li {
+        margin: 20px 0;
+        text-align: start;
+      }
+
+      button {
+        background-color: #ffff;
+        border: 1px solid #d5d9d9;
+        border-radius: 8px;
+        box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 7px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+
+      #x-box-id {
+        display: flex;
+        gap: 10px;
+      } @media (max-width: 960px){
+        #x-cont-id {
+        flex-direction: column;
+      }}
+    </style>
+    <div class="container">
+      <section>
+        <h1>Xbox Series</h1>
+        <div class="img">
+          <img src="./img/x-box/i1.jpg" alt="" />
+          <img src="./img/x-box/i2.jpg" alt="" />
+          <img src="./img/x-box/i3.jpg" alt="" />
+          <img src="./img/x-box/i4.jpg" alt="" />
+        </div>
+
+        <hr />
+        <div id="x-box-id">
+          <div>
+            <h1>About this item</h1>
+            <ul>
+              <li>
+                <span>
+                  XBOX SERIES X: The fastest, most powerful Xbox ever. Explore
+                  rich new worlds with 12 teraflops of raw graphic processing
+                  power, DirectX ray tracing, a custom SSD, and 4K gaming.*
+                </span>
+              </li>
+              <li>
+                <span>
+                  FASTER LOAD TIMES: Make the most of every gaming minute with
+                  Quick Resume, lightning-fast load times, and gameplay of up to
+                  120 FPS – all powered by Xbox Velocity Architecture.
+                </span>
+              </li>
+              <li>
+                <span>
+                  IN THE BOX: Xbox Series X console, one Xbox Wireless
+                  Controller, an ultra high-speed HDMI cable, power cable, and 2
+                  AA batteries.
+                </span>
+              </li>
+              <li>
+                <span>
+                  SURROUND SOUND: Enhance gameplay with both full-spectrum
+                  visuals and immersive audio with Dolby Vision and Dolby Atmos
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <video src="./vid/Xbox.mp4" muted controls autoplay width="500px""></video>
+          </div>
+        </div>
+        <!-- end x-box -->
+
+        <a href="./index.html">
+          <button>back to Home</button>
+        </a>
+        <a
+          href="https://www.amazon.com/Xbox-1TB-SSD-Console-Controller-Architecture/dp/B08H75RTZ8/ref=sr_1_1?keywords=xbox+consoles&pf_rd_i=23508887011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=434db2ed-6d53-4c59-b173-e8cd550a2e4f&pf_rd_r=7SJ68V9VHGM868XXHG3Z&pf_rd_s=merchandised-search-5&pf_rd_t=101&qid=1706699905&s=videogames&sr=1-1"
+          ><button>veiw in amazon</button></a
+        >
+      </section>
+    </div>
+  </body>
+</html>
