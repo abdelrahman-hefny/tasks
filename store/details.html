@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>details</title>
+  <link rel="shortcut icon" href="./img/Amazon-icon.png" type="image/x-icon"'>
+  <link rel="stylesheet" href="style.css">
+  <style>img {
+    min-width: 100px;
+    max-width: 24%;
+  }
+    /* ستايل للبوب أو النافذة المنبثقة */
+    .popup {
+      display: none; /* أخفيها بشكل افتراضي */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .overlay {
+      display: none; /* أخفيها بشكل افتراضي */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .popup h2 {
+      margin-bottom: 10px;
+    }
+
+    .popup button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="./img/logo.png" class="logo" alt="" />
+    <ul>
+      <li>
+        <a href="./contact.html"> Contact </a>
+      </li>
+
+      <li>
+        <a href="./help.html"> Help </a>
+      </li>
+
+      <li>
+        <a href="./index.html">Home</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <section>
+      <h1>قميص رجالي</h1>
+      <div class="img">
+        <img src="./img/sim1.jpeg" alt="sim" />
+        <img src="./img/sim2.jpeg" alt="sim" />
+        <img src="./img/sim3.jpeg" alt="sim" />
+        <img src="./img/sim4.jpeg" alt="sim" />
+      </div>
+      <hr />
+      <div id="x-cont-id">
+        <div>
+          <h1>تفاصيل هذا المنتج</h1>
+          <ul>
+            <li>
+              <span>
+                قميص رجالي بأكمام طويلة وياقة مستديرة. متوفر باللون الأبيض والأسود. مصنوع من القطن عالي الجودة.
+              </span>
+            </li>
+            <li>
+              <span>
+                قميص رجالي بأكمام طويلة منقوش منقوش أنثراسيت
+              </span>
+            </li>
+          </ul>
+        </div>
+        <h3>السعر: 30$</h3>
+        <button class="buy_shirt">اشتري الآن</button>
+      </div>
+      <a href="./index.html">
+        <button>back to Home</button>
+      </a>
+      <a href="https://www.colins.eg/p/--3400">
+        <button>veiw in website</button>
+      </a>
+    </section>
+  </div>
+
+  <!-- البوب أو النافذة المنبثقة -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <h2>تأكيد الشراء</h2>
+    <p>هل أنت متأكد أنك تريد شراء هذا المنتج؟</p>
+    <button id="confirmPurchase">نعم، أؤكد الشراء</button>
+    <button id="cancelPurchase">إلغاء</button>
+  </div>
+
+  <script>
+    const buyButton = document.querySelector('.buy_shirt');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+
+    // عرض البوب أو النافذة المنبثقة عند الضغط على زر "اشتري الآن"
+    buyButton.addEventListener('click', function() {
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    });
+
+    // إغلاق البوب أو النافذة المنبثقة عند الضغط على زر "إلغاء"
+    document.getElementById('cancelPurchase').addEventListener('click', function() {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+
+
+    // توجيه المستخدم إلى صفحة تأكيد الشراء عند الضغط على زر "نعم، أؤكد الشراء"
+    document.getElementById('confirmPurchase').addEventListener('click', function() {
+      window.location.href = 'سه'; // توجيه المستخدم إلى صفحة تأكيد الشراء
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* list-style-type: none; */
+}
+
+body {
+  background: #eee;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 300px; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.product-image {
+  width: 70%;
+  height: 70%;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+h3,
+p {
+  margin: 5px 10px 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+
+  /* width: 100%; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  justify-items: center;
+}
+
+main {
+  padding: 0 20px 20px;
+}
+nav {
+  background-color: #009b8e;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;z-index: 100;
+}
+
+.logo {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  /* إضافة الصورة الخاصة باللوجو */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  display: block;
+}
+
+li a:hover {
+  background-color: #0001011a;
+}
+
+li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: top left;
+}
+
+li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: top right;
+}
+
+/* CSS */
+.button-38 {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.5rem 0.8rem;
+  margin: 15px;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 2px 5px 0 rgb(0, 159, 152, 8.5),
+    0 3px 2px 0 rgb(0, 155, 142, -3.94);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition-duration: 0.5s;
+}
+
+.button-38:hover {
+  background-color: #00ffc81f;
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+footer {
+  background-color: rgb(0, 155, 142);
+  color: #fff; /* للحفاظ على قراءة النص */
+  padding: 5px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.store-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.store-image img {
+  width: 100%;
+  height: calc(100vh - 50px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* إضافة ظل للصورة */
+  margin-top: -20px;
+  margin-top: 30px;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #009b8e; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 7px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  transition-duration: 0.5s;
+}
+
+#myBtn:hover {
+  background-color: #254d44a4; /* Add a dark-grey background on hover */
+}
+#myBtn svg {
+  height: 15px;
+  padding: 0 5px;
+}
+svg {
+  cursor: pointer;
+}
+.buy_shirt {
+  font-size: 25px;
+  width: 200px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  background: #009b8e;
+  color: #fff;
+  transition-duration: 0.5s;
+  position: relative;
+}
+.buy_shirt:hover {
+  background: #04353179;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+h3{
+  direction: rtl;
+
+}
+body {
+  text-align: center;
+}
+h1{
+  margin-bottom: 20px;
+}
+.img {
+  max-width: 100%;
+}
+
+li {
+  margin: 20px 0;
+  text-align: start;
+}
+button {
+  background-color: #ffff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 7px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+#x-cont-id {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+}
+.fa-user{
+  color: #fff;
+}
+nav ul{
+  direction: rtl;
+}
+nav ul li {
+  margin: 0;
+}
