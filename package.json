@@ -14,5 +14,13 @@
     "gulp-livereload": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.71.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/abdelrahman-hefny/tasks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdelrahman-hefny/tasks/issues"
+  },
+  "homepage": "https://github.com/abdelrahman-hefny/tasks#readme"
 }
