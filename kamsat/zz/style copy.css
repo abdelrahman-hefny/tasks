@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 200vh;
+    background-color: #eee;
+}
+
+header {
+    background: #444;
+    color: #fff;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .user img {
+    width: 36px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    list-style-type: none;
+    font-size: 14px;
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+nav ul li i {
+    margin-left: 10px;
+    transform: rotateY(180deg);
+    font-size: 14px;
+    color: #484848;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 11px;
+}
+
+header a:hover {
+    background: #ffffff2d;
+}
+
+nav ul .no1:hover {
+    background: #00000000;
+}
+
+nav {
+    display: flex;
+}
+
+header nav ul li img {
+    width: 144px;
+}
+
+.fa-bars {
+    font-size: 25px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding: 0;
+}
+
+.user i {
+    font-size: 18px;
+    margin: 0 20px;
+}
+
+header .user a {
+    margin-left: 0px;
+    padding: 10px 0px;
+}
+
+.d-1000 {
+    display: none;
+}
+
+.d-1008 {
+    display: flex;
+}
+
+/* Small screen */
+@media (max-width: 1000.98px) {
+    header {
+        background: #fff;
+        bottom: 0;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .d-1000 {
+        display: flex;
+        width: 100%;
+    }
+
+    .d-1008 {
+        display: none;
+        width: 100%;
+    }
+
+    .d-1000 ul,
+    .d-1000 nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        color: #484848;
+        text-align: center;
+    }
+
+    nav ul li h4,
+    nav ul li i {
+        font-size: 12px;
+        margin: auto;
+        font-family: "Noto Kufi Arabic", sans-serif;
+        color: #484848;
+    }
+
+    nav ul li i {
+        font-size: 14px;
+    }
+}

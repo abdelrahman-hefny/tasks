@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+body{
+    background: #ddd; 
+}
+/* nav bar*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:10px  15px;
+    background-color: #343a40  ;
+    margin-bottom: 20px;
+    align-items: center;
+}
+header nav ul{
+    display: flex;gap: 10px;
+    list-style-type: none;direction: rtl;font-size: 20px;
+    color: #fff ; 
+} 
+header .logo img{
+    width: 70px;height: 50px;
+}
+
+table{
+    width: 100%;
+}
+table tr {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-gap: 15px;
+}
+table tr td{
+    width: 150px;padding: 10px;
+    border: 1px solid ;
+    text-align: center;  
+    background: rgb(255, 255, 255);
+    color: #000000;
+}table tr td a{
+    color :#343a40
+}
+      section {
+        padding: 10px 20px ;
+      }
