@@ -208,6 +208,65 @@ section.all .g-main .img-1 span {
   background-color: rgba(34, 34, 34, 0.2745098039);
 }
 
+.title-bis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5pxx 5px;
+  margin: 30px 0;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-size: 20px;
+}
+.title-bis button {
+  padding: 10px 20px;
+  border: 1px solid #52b035;
+  color: #52b035;
+  font-size: 18px;
+  background: #fff;
+  transition-duration: 0.3s;
+}
+.title-bis button:hover {
+  color: #fff;
+  background: #52b035;
+}
+.title-bis button a {
+  color: #fff;
+}
+
+.bis {
+  padding: 0 30px;
+}
+
+.cat-bis {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.cat-bis div {
+  background-image: url("./img/landing_page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  position: relative;
+  font-weight: bold;
+}
+.cat-bis div span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(34, 34, 34, 0.2745098039);
+}
+
 /* Small screen */
 @media (max-width: 1002.98px) {
   header {

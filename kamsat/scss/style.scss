@@ -250,8 +250,73 @@ section.all {
 }
 
 
+// title-bis 
+.title-bis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5pxx 5px;
+    margin: 30px 0;
 
+    font-family: $main-font;
+    font-size: 20px;
 
+    button {
+        padding: 10px 20px;
+        border: 1px solid $grean;
+        color: $grean;
+        font-size: 18px;
+        background: #fff;
+        transition-duration: .3s;
+
+        &:hover {
+            color: #fff;
+            background: $grean;
+        }
+
+        a {
+            color: #fff;
+
+        }
+    }
+
+}
+
+.bis {
+    padding: 0 30px;
+}
+
+.cat-bis {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+// main bis
+.cat-bis div {
+    background-image: $background-image;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: $main-font;
+    position: relative;
+    font-weight: bold;
+
+    span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #22222246;
+    }
+}
 
 
 
