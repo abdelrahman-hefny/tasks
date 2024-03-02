@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/abdelrahman-hefny/tasks/issues"
   },
-  "homepage": "https://github.com/abdelrahman-hefny/tasks#readme"
+  "homepage": "https://github.com/abdelrahman-hefny/tasks#readme",
+  "dependencies": {
+    "git": "^0.1.5"
+  }
 }
