@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/abdelrahman-hefny/tasks#readme",
   "dependencies": {
+    "config": "^3.3.11",
     "git": "^0.1.5"
   }
 }
