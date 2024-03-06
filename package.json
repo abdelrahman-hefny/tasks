@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "git": "^0.1.5",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-livereload": "^4.0.2",
@@ -24,7 +25,6 @@
   },
   "homepage": "https://github.com/abdelrahman-hefny/tasks#readme",
   "dependencies": {
-    "config": "^3.3.11",
-    "git": "^0.1.5"
+    "config": "^3.3.11"
   }
 }

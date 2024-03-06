@@ -1,0 +1,552 @@
+$alt-color: #753f8e;
+
+// Reset CSS
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+// Global styles
+a {
+    color: #222;
+}
+
+body {
+    background-image: url('./img/blue_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+// Header styles
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            li {
+                position: relative;
+
+                .logo {
+                    width: 100px;
+
+                    img {
+                        width: 120px;
+                    }
+                }
+
+                a {
+                    padding: 15px 20px;
+                    font-weight: 600;
+
+                    &.link_header::after {
+                        width: -webkit-fill-available;
+                        width: 0;
+                        height: 3px;
+                        position: absolute;
+                        content: "";
+                        background-color: $alt-color;
+                        bottom: -13px;
+                        z-index: 5;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        right: 50%;
+                        transition-duration: 0.3s;
+                    }
+
+                    &:hover::after {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 20px;
+        color: rgba(3, 0, 0, 0.651);
+        transition-duration: 0.5s;
+        margin: auto;
+
+        &:hover {
+            color: #fff;
+            background-color: $alt-color;
+            cursor: pointer;
+        }
+    }
+
+    .login {
+        position: relative;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+
+        .login-top {
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 1px solid;
+            padding: 15px 0;
+
+            h2 {
+                cursor: pointer;
+            }
+        }
+
+        .login_page,
+        .signin_page {
+            position: fixed;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background: #fff;
+            display: none;
+            z-index: 999;
+        }
+
+        .login_page #form_login {
+            display: none;
+        }
+
+        form {
+            padding: 30px 40px 20px;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: 35px;
+                font-family: sans-serif;
+                text-align: center;
+                margin: 10px;
+            }
+
+            img {
+                cursor: pointer;
+                width: 65px;
+                display: flex;
+                margin: 20px auto;
+                height: 60px;
+                border-radius: 50%;
+                outline: 1px solid #000;
+            }
+
+            input {
+                padding: 10px 24px;
+                margin: 5px 10px;
+                border: 1px solid rgb(167, 167, 167);
+                font-size: 17px;
+                border-radius: 10px;
+            }
+
+            input:focus {
+                outline: $alt-color 1px solid;
+            }
+
+            button {
+                margin: 15px 30%;
+            }
+        }
+    }
+}
+::selection {
+    background-color:#753f8e ;// اللون المطلوب بشكل خفيف
+    color: #fff; // لون النص
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    pointer-events: none;
+}
+
+#login_page {
+    /* أسلوب التصميم لصفحة تسجيل الدخول هنا */
+}
+
+.sec1 {
+    width: 100%;
+
+    .sid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img {
+        position: relative;
+        left: 220px;
+
+        img {
+            max-width: 60%;
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+
+            &:nth-child(1) {
+                max-width: 80%;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                max-width: 60%;
+            }
+
+            &:nth-child(2) {
+                max-width: 31%;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 3;
+            }
+
+            &:nth-child(4) {
+                position: absolute;
+                top: 62%;
+                left: -190%;
+                width: 100%;
+                z-index: 0;
+                min-width: 240%;
+            }
+        }
+    }
+
+    .text {
+        padding: 0 20px;
+        text-align: center;
+
+        span {
+            color: $alt-color;
+            font-size: calc(35px + 0.5vw);
+        }
+
+        h1 {
+            font-size: calc(32px + 0.5vw);
+            color: #222;
+            text-align: left;
+            width: 382px;
+        }
+
+        p {
+            margin: 20px 0;
+            color: #222;
+            font-size: calc(18px + 0.3vw);
+            text-align: left;
+        }
+    }
+}
+
+.m-display {
+    display: none;
+}
+
+// Media queries for responsiveness
+@media only screen and (max-width: 768px) {
+    .sec1 .sid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sec1 .img {
+        display: none;
+    }
+
+    .sec1 .text {
+        flex: 1;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .img img {
+        margin-left: -100px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .img img {
+        display: none;
+
+        .text {
+            margin: auto;
+
+           
+            h1 {
+                text-align: center !important;
+            }
+        }
+    }
+
+    .sec1 .text h1,
+    .sec1 .text p {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header nav ul li a {
+        padding: 0;
+    }
+
+    nav ul li:first-child {
+        padding: 0;
+        margin: 0 0 0 -20px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .m-display {
+        display: block;
+    }
+
+    .login a {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin: auto;
+            margin-left: 10px;
+        }
+    }
+
+    .mt1 {
+        position: absolute;
+        right: 50%;
+        background-color: #fff;
+        padding: 17px 80px;
+        width: 300px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        display: none;
+    }
+
+    header nav ul li a.link_header::after {
+        bottom: -1px;
+    }
+
+    .login a {
+        cursor: pointer;
+    }
+
+    nav ul li:nth-child(2) {
+        top: 12%;
+    }
+
+    nav ul li:nth-child(3) {
+        top: 18%;
+    }
+
+    nav ul li:nth-child(4) {
+        top: 24%;
+    }
+
+    nav ul li:nth-child(5) {
+        top: 30%;
+    }
+}
+
+// Footer styles
+footer {
+    overflow-x: hidden;
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+
+    .container {
+        background-image: url("./img/Group 1131.png");
+        width: 110%;
+        height: 100%;
+        background-size: cover;
+        height: fit-content;
+        height: 510px;
+        left: 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        overflow-y: hidden;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        left: -30px;
+    }
+
+    .sid_left {
+        position: absolute;
+        bottom: 30px;
+        left: 110px;
+    }
+}
+
+#mobile_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+    pointer-events: none;
+}
+
+.sec1 .img img:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    z-index: 2;
+}
+
+.sec1 .img img:nth-child(3) {
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.sec1 .img img:nth-child(4) {
+    min-width: 130%;
+}
+
+.sec1 .img img:nth-child(4) {
+    max-width: 60%;
+}
+
+.sec1 .img img:nth-child(4) {
+    position: absolute;
+    top: 60%;
+    left: -190%;
+    width: 100%;
+    z-index: 0;
+    min-width: 240%;
+}
+
+.sec1 .img {
+    position: relative;
+    right: -20px;
+    left: 220px;
+}
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.super, .raale, .dis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* تغيير المسافة بين العناصر إذا لزم الأمر */
+}
+
+.super img, .raale img, .dis img {
+    max-width: 100%; /* لضمان تناسب الصور مع حجم الشاشة */
+}
+
+.super, .raale {
+    order: -1; /* يجعل العنصرين الأول والثاني يظهران أعلى الصفحة */
+}
+
+.way {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.way img {
+    max-width: 100%;
+}
+.sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sec2 > div {
+    width: calc(50% - 20px);
+    margin: 10px;
+}
+
+.sec2 .way {
+    width: 30%;
+}
+
+.sec2 img {
+    width: 100%;
+    height: auto;
+}
+
+.sec2 h4,
+.sec2 p {
+    text-align: center;
+}
+
+.sec2 .way div {
+    text-align: center;
+}
+.sec2 >div{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+    .sec2 {
+        flex-direction: row; /* تغيير توجيه العناصر إلى الأفقي على الأجهزة الكبيرة */
+        justify-content: space-around; /* توزيع العناصر بالتساوي على الأجهزة الكبيرة */
+    }
+
+    .super, .raale, .dis {
+        width: 30%; /* تحديد عرض العناصر على الأجهزة الكبيرة */
+        margin-bottom: 0; /* إزالة المسافة بين العناصر على الأجهزة الكبيرة */
+    }
+
+    .way {
+        width: 25%; /* تحديد عرض العنصر على الأجهزة الكبيرة */
+    }
+}

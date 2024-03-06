@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<style>
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ .login {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+    height: 437px;    background: #fff;
+ 
+}
+.log_text{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 18%;
+  margin-bottom: -20px;
+}
+ .login .login_page, .signin_page  {
+  position: absolute;
+ 
+  background: #9c27b0;
+  padding: 10px 10px 10px  ;
+}
+ .login h2 ,
+ .login h2 {
+  font-size: 25px;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 10px 0 30px;
+  border-bottom: #9c27b0 5px solid;
+  padding-bottom: 10px;
+}
+ .login .login_page form img ,
+ .login .signin_page form img
+  {
+  cursor: pointer;
+  width: 65px;
+  display: flex;
+  margin:20px auto;
+  height: 60px;
+  border-radius: 50%;
+  outline: 1px solid #000;
+}
+ .login .login_page form input ,
+ .login .signin_page form input
+  {
+  padding: 7px 14px;
+  margin: 5px 10px;
+  border: 1px solid rgb(167, 167, 167);
+  font-size: 17px;
+  border-radius: 5px;
+}
+.login .signin_page form input:focus , 
+.login .login_page form input:focus
+{
+ outline: 1px solid #9c27b0;
+}
+.login{
+width: 60%;
+margin: 20px auto;
+
+}
+.login .login_page{left: 0;
+border-radius:  0 120px 0 0;
+width: 50%; 
+
+
+}
+ .login .signin_page { border-radius:  120px 0 0 0;
+right: 0;
+width: 50%;  
+display: none;
+animation: box 2s  ease;
+ }
+
+ .login .login_page:hover{
+    animation: box 2s  ;
+ }
+ .login .login_page::after{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 5;
+ }
+ .login form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+.login form button {
+    padding: 9px 15px;
+    width: fit-content;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    color: #000;
+    border: 1px solid #fff;
+    cursor: pointer;
+transition-duration: .3s;
+
+}
+.login form button:hover{
+background-color: #0000001a;
+
+
+}@keyframes box {
+    0%{
+       left: 0; 
+    }
+    100%{
+        background: #fff;
+        right:  0;
+position: absolute;
+z-index: 200;
+
+    }
+    
+}
+</style>
+
+<div class="login">
+<div class="log_text">
+    <h2>Login</h2>
+    <h2>Signin</h2>
+</div>
+<div class="login_page">
+
+    <form action="">
+   
+    <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png" alt="" />
+    <input type="text" placeholder="Name" name="usernam_signin" id="signin_name" required />
+    <input type="password" placeholder="password" name="passowrd_signin" id="passowrd_sign"
+        required />
+    <input type="password" placeholder="re-password" name="re-passowrd_signin"
+        id="re-passowrd_sign" required />
+    <button type="submit">Signin</button>
+</form>
+</div>
+<div class="signin_page" >
+<form action="">
+ 
+    <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png"  alt="" />
+    <input type="text" placeholder="Name" name="usernam_login" id="login_name" required />
+    <input type="password" placeholder="password" name="passowrd_login" id="passowrd__login"
+        required />
+    <input type="password" placeholder="re-password" name="re-passowrd_login"
+        id="re-passowrd_name_login" required />
+    <button type="submit">Login</button>
+</form>
+</div>
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+</script>
+</body>
+</html>
