@@ -72,35 +72,3 @@ mobileLinks.forEach(link => {
         mobileOverlay.style.pointerEvents = "none"; // تعطيل عملية النقر من خلال الأوفرلاي
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    const carousel = document.querySelector('.carousel');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const prevControl = document.querySelector('.carousel-control-prev');
-    const nextControl = document.querySelector('.carousel-control-next');
-    let currentIndex = 0;
-  
-    function goTo(index) {
-      carouselItems.forEach((item, i) => {
-        if (i === index) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-      currentIndex = index;
-    }
-  
-    function slidePrev() {
-      const nextIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-      goTo(nextIndex);
-    }
-  
-    function slideNext() {
-      const nextIndex = (currentIndex + 1) % carouselItems.length;
-      goTo(nextIndex);
-    }
-  
-    prevControl.addEventListener('click', slidePrev);
-    nextControl.addEventListener('click', slideNext);
-  });
-  

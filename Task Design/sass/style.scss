@@ -261,6 +261,7 @@ header {
 
     .text {
         padding: 0 20px;
+        z-index: 10;
         text-align: center;
 
         span {
@@ -446,7 +447,7 @@ footer {
         height: 100%;
         background-size: cover;
         height: fit-content;
-        height: 510px;
+        height: 563px;
         left: 0;
         position: relative;
         left: 0;
