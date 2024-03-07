@@ -265,11 +265,11 @@ header {
 
         span {
             color: $alt-color;
-            font-size: calc(35px + 0.5vw);
+            font-size: calc(31px + 0.5vw);
         }
 
         h1 {
-            font-size: calc(32px + 0.5vw);
+            font-size: calc(29px + 0.5vw);
             color: #222;
             text-align: left;
             width: 382px;
@@ -436,6 +436,10 @@ footer {
     padding: 0;
     margin-top: -145px;
 
+    img {
+        cursor: pointer;
+    }
+
     .container {
         background-image: url("./img/Group 1131.png");
         width: 110%;
@@ -488,9 +492,11 @@ footer {
         justify-content: space-between;
         padding: 10px;
         border-radius: 10px;
+        cursor: pointer;
 
         img {
             width: 19%;
+
         }
 
         div {
@@ -678,10 +684,7 @@ section.sec2>span {
 }
 
 @media only screen and (max-width: 768px) {
-    footer {
 
-        margin-top: 100px;
-    }
 
     section.sec2>span img {
         display: none;
@@ -922,4 +925,38 @@ footer .img img {
     }
 
 
+}
+
+@media (max-width: 524px) {
+
+    header .login .login_page,
+    header .login .signin_page {
+        position: fixed;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-64%, -49%);
+        border-radius: 10px;
+        background: #fff;
+        display: none;
+        z-index: 999;
+    }
+
+    footer .sid_left {
+        position: absolute;
+        bottom: 160px;
+        left: 59px;
+    }
+
+    .center img {
+        width: 100%;
+        position: relative;
+        left: -30px;
+    }
+
+    footer .sid_left {
+        position: absolute;
+        bottom: 160px;
+        left: 60px;
+    }
 }
