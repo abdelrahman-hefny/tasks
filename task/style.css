@@ -1,0 +1,25 @@
+.landing
+{
+    margin-top: 75px;
+font-weight: 300;
+    
+}
+body{
+background-image: url('az.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.op{
+    color: yellow;
+}
+.p1{
+    color: yellow;
+    margin-left: -300px;
+}
+.pp{
+    border-color: yellow;
+}
+a:hover{
+    background-color: bisque;
+}

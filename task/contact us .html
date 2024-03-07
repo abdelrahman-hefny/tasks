@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.js"></script>
+    <script src="RESstyle.css"></script>
+</head>
+<style>
+  
+footer{
+    font-size: 15px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Utility Classes */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid #fff;
+}
+
+.btn-secondary,
+.btn-third:hover {
+    background: #383848;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-third {
+    background: #e4b95b;
+}
+
+.primary-text {
+    color: #e4b95b;
+}
+
+/* Header Start */
+header {
+    height: 100vh;
+    background: url("IMAGE/home1.jpeg") center center/cover no-repeat;
+    position: relative;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+#navbar img {
+    width: 80px;
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 100px;
+}
+
+nav ul li a {
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #e4b95b;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    /* Add exmple of greeen background */
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+header .content h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+header .content p {
+    color: #fff;
+    margin: 20px 0 40px;
+}
+
+header * {
+    z-index: 10;
+}
+
+/* Header End */
+
+/* About Start */
+#about {
+    height: 80vh;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .title,
+#offers .title,
+#menu .title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#about h2,
+#offers h2,
+#menu h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    color: #383848;
+}
+
+#about .title p {
+    font-weight: 600;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+#about .about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .about-content p {
+    margin-right: 7rem;
+    line-height: 1.6;
+    color: #9a9a9a;
+    font-weight: 500;
+}
+
+#about img {
+    max-width: 450px;
+}
+
+#about .about-content a {
+    margin-top: 2rem;
+}
+
+/* About End */
+/* Offers Section start */
+#offers {
+    height: 80vh;
+    background: url("IMAGE/offer-background.jpg") center center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#offers h2 {
+    color: #e4b95b;
+}
+
+#offers .title p {
+    color: #fff;
+    font-weight: 500;
+}
+
+#offers .offers-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#offers .offers-items img {
+    width: 200px;
+}
+
+#offers .offers-items h3 {
+    font-size: 25px;
+    color: #fff;
+    margin: 15px 0;
+}
+
+#offers .offers-items p {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+#offers .offers-items span {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+/* Offers Section end */
+/* Menu Section Start */
+#menu {
+    background: #f4f2ed;
+    padding: 5rem 0;
+}
+
+#menu .title h2 {
+    color: #383848;
+}
+
+#menu .title p {
+    color: #9a9a9a;
+    font-weight: 500;
+}
+
+#menu .menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .menu-items .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#menu .menu-items .menu-item img {
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+#menu .menu-items .menu-item h3 {
+    color: #383848;
+    border-bottom: 1px dashed #c2bdbd;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#menu .menu-items .menu-item span {
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+#menu .menu-items .menu-item p {
+    margin-top: 10px;
+}
+
+#menu .btn {
+    display: block;
+    margin: auto;
+    border: none;
+    margin-top: 30px;
+}
+
+/* Menu Section End */
+/* Daytime section Start */
+#daytime {
+    background: url("IMAGE/daytime_bg.jpeg") center center/cover fixed no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+#daytime .daytime-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40vh;
+}
+
+#daytime .daytime-items h3 {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+#daytime .daytime-items p {
+    font-weight: 500;
+}
+
+/* Daytime section End */
+
+/* Gallery section start */
+#gallery {
+    background: url("IMAGE/offer-background.jpg") center center/cover;
+    padding: 8rem 0 6rem;
+}
+
+#gallery h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#gallery .img-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#gallery .img-gallery img {
+    margin: 20px;
+    width: 280px;
+    height: 200px;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+#gallery .img-gallery img:hover {
+    opacity: 1;
+}
+
+/* Gallery section end */
+/* Contact Section start */
+#contact {
+    background: #f4f2ed;
+    padding: 5rem 0;
+}
+
+#contact .container {
+    max-width: 900px;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact .contact-info {
+    width: 50%;
+}
+
+#contact .contact-info div {
+    margin: 30px 0;
+    line-height: 1.7;
+}
+
+#contact .contact-info h3 {
+    font-size: 28px;
+    color: #383848;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info p {
+    color: #9a9a9a;
+}
+
+#contact .contact-info p i {
+    color: #e4b95b;
+    margin-right: 5px;
+}
+
+#contact .contact-info a i {
+    color: #fff;
+    background: #383848;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+#contact .contact-info a i:hover {
+    background-color: #e4b95b;
+    color: #383848;
+}
+
+form {
+    width: 50%;
+}
+
+form input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: none;
+    background-color: #e3e2dd;
+}
+
+form input:focus,
+textarea:focus {
+    outline: none;
+}
+
+form button {
+    color: #fff;
+}
+
+/* Contact Section End */
+/* Footer Start */
+#footer {
+    background-color: #383848;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+
+@media (max-width: 1000px) {
+    #navbar img {
+        margin-left: 20px;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    header .content h1 {
+        font-size: 28px;
+    }
+
+    #about {
+        height: auto;
+        padding: 4rem 2rem;
+    }
+
+    #about .about-content p {
+        margin-right: 2rem;
+    }
+
+    #about img {
+        width: 250px;
+    }
+
+    #offers .offers-items img {
+        width: 150px;
+    }
+
+    #offers .offers-items h3 {
+        font-size: 18px;
+    }
+
+    #menu .menu-items {
+        display: block;
+    }
+
+    #contact .contact-content {
+        flex-direction: column;
+    }
+
+    /* Mobile Devices */
+    @media (max-width: 600px) {
+        #navbar {
+            flex-direction: column;
+        }
+
+        #navbar img {
+            margin-bottom: 20px;
+        }
+
+        header .content h1 {
+            font-size: 18px;
+        }
+
+        header .content p {
+            font-size: 14px;
+        }
+
+        #about .about-content {
+            flex-direction: column;
+        }
+
+        #about .about-content a {
+            margin: 2rem 0;
+        }
+
+        #about img {
+            display: none;
+        }
+
+        #offers {
+            height: auto;
+            padding: 30px 10px;
+        }
+
+        #offers .offers-items {
+            flex-direction: column;
+        }
+
+        #menu .menu-items .menu-item {
+            margin: 20px 10px;
+        }
+
+        #daytime .daytime-items {
+            display: block;
+            height: auto;
+            padding: 30px 0;
+        }
+
+        #daytime .daytime-items .daytime-item {
+            margin-top: 20px;
+        }
+
+        #contact .contact-info,
+        form {
+            width: 80%;
+        }
+    }
+}
+</style>
+<body>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div>
+                        <h3>ADDRESS</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> Egypt, Assuit</p>
+                        <p><i class="fa-solid fa-phone"></i> Phone: 01116512626</p>
+                        <p><i class="fa-regular fa-envelope"></i> SobheyInjection.com</p>
+                    </div>
+                    <div>
+                        <h3>WORKING HOURS</h3>
+                        <p>11:00 am to 12:00 am on Weekdays</p>
+                    </div>
+                    <div>
+                        <h3>FOLLOW US</h3>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" style="color: black;"/>
+                          </svg></a>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" style="color: black;"/>
+                          </svg></i></a>
+                        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" style="color: black;">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                          </svg></a>
+                        
+                    </div>
+                </div>
+                <form>
+                    <input type="text" name="Name" id="name" placeholder="Full Name">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn-third">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>Made by kerooo</footer>
+</body>
+</html>

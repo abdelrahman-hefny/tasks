@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #222;
 }
@@ -30,7 +34,7 @@ a {
 }
 .container {
   width: 90%;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 header nav {
@@ -173,7 +177,6 @@ header .login form button {
 
 .sec1 {
   width: 100%;
-  margin-top: 200px;
 }
 .sec1 .sid {
   display: flex;
@@ -222,16 +225,16 @@ header .login form button {
   min-width: 240%;
 }
 .sec1 .text {
-  padding: 0 20px;
+  padding: 0;
   z-index: 10;
   text-align: center;
 }
 .sec1 .text span {
   color: #753f8e;
-  font-size: calc(31px + 0.5vw);
+  font-size: calc(28px + 0.5vw);
 }
 .sec1 .text h1 {
-  font-size: calc(29px + 0.5vw);
+  font-size: calc(28px + 0.5vw);
   color: #222;
   text-align: left;
   width: 382px;
@@ -276,7 +279,7 @@ header .login form button {
     top: 36px;
   }
   .dis {
-    top: 90px;
+    top: 477px;
   }
 }
 .sec2 h4,
@@ -295,7 +298,7 @@ header .login form button {
     display: none;
   }
   .img img .text {
-    margin: auto;
+    margin-top: 200px;
   }
   .img img .text h1 {
     text-align: center !important;
@@ -512,25 +515,21 @@ body {
   top: 130px;
 }
 
-section.sec2 > span {
+section.sec2 > img {
   position: absolute;
-  top: 33%;
-  left: 40px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(5deg);
-  z-index: -1;
-}
-section.sec2 > span span img {
-  width: 85%;
-  height: 210%;
-  margin: auto;
+  width: 71%;
+  top: 2%;
+  left: 22%;
+  height: 100%;
+  position: absolute;
+  width: 65%;
+  top: 8%;
+  left: 22%;
+  height: 60%;
 }
 
 .dis {
-  top: 330px;
+  top: 477px;
 }
 
 .super img,
@@ -595,7 +594,7 @@ section.sec2 > span span img {
 }
 
 @media only screen and (max-width: 768px) {
-  section.sec2 > span img {
+  section.sec2 > img {
     display: none;
   }
   .way {
@@ -629,13 +628,13 @@ section.sec2 > span span img {
     /* تحديد عرض العنصر على الأجهزة الكبيرة */
   }
   .super {
-    top: 50%;
+    top: 30px;
   }
   .raale {
-    top: 220px;
+    top: 183px;
   }
   .dis {
-    top: 410px;
+    top: 330px;
   }
 }
 .way > div {
@@ -685,7 +684,7 @@ footer .img img {
     top: 40px;
   }
   .dis {
-    top: 60px;
+    top: 477px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -818,4 +817,104 @@ footer .img img {
     bottom: 160px;
     left: 60px;
   }
+}
+@media screen and (max-width: 991px) {
+  .background {
+    width: 100%;
+    height: auto;
+    min-height: 390px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .background {
+    width: 100%;
+    height: 615px;
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
+  }
+}
+.background {
+  width: 100%;
+  height: 800px;
+  background-image: url(../img/blue_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 85%;
+  position: relative;
+  top: 0px;
+}
+
+section.sec2 > img {
+  position: absolute;
+  width: 71%;
+  top: 2%;
+  left: 22%;
+  height: 100%;
+  position: absolute;
+  width: 65%;
+  top: 8%;
+  left: 22%;
+  z-index: -1;
+  height: 60%;
+}
+
+@media only screen and (max-width: 860px) {
+  .img img {
+    display: none;
+  }
+  .text {
+    margin-top: 200px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  section.sec2 > img {
+    height: 104%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  section.sec2 > img {
+    top: 5%;
+    height: 92%;
+  }
+}
+.div4all {
+  position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+  .div4all img {
+    width: 270px;
+  }
+  .div4all img {
+    width: 270px;
+  }
+}
+.div4all div {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  text-align: left;
+}
+
+.div4all div p {
+  color: white;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .div4all div h3 {
+    font-size: 25px;
+  }
+}
+.div4all div h3 {
+  color: white;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.div4all {
+  position: relative;
+  right: 25%;
+  top: 210px;
 }

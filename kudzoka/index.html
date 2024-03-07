@@ -11,72 +11,76 @@
 </head>
 
 <body>
-    <div id="overlay"></div>
-    <div id="mobile_overlay"></div>
-    <div class="bg"></div>
-
-    <header>
-        <div class="container">
-            <nav>
-
-                <ul>
-                    <li>
-                        <div class="logo">
-                            <a href="#./index.html"><img src="./img/77c3f8418880a56f5f75687c4d268a20.png" alt="" /></a>
-                        </div>
-                    </li>
-                    <li class="mt1"><a href="#Home" class="link_header">Home</a></li>
-                    <li class="mt1"><a href="#Services" class="link_header">Services</a></li>
-                    <li class="mt1"><a href="#About Us" class="link_header">About Us</a></li>
-                    <li class="mt1"><a href="#Help" class="link_header">Help Center</a></li>
-                </ul>
-                <div class="login">
-                    <a><button id="btn_login_up" onclick="btn_login_up()">Loging</button>
-                        <svg onclick="btn_bar_up()" class="m-display" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            width="30" height="40" viewBox="0 0 50 50">
-                            <path
-                                d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
-                            </path>
-                        </svg>
-                    </a>
-
-                    <div class="login_page" id="login_page">
-                        <div class="signin">
-                            <div class="login-top">
+    <div class="background">
+        <div id="overlay"></div>
+        <div id="mobile_overlay"></div>
 
 
+        <header>
+            <div class="container">
+                <nav>
 
-                                <h2 id="btn_Signin" onclick="btn_Sign()">Signup</h2>
-                                <h2 id="btn_login" style="opacity: 0.5;" onclick="btn_log()">Login</h2>
+                    <ul>
+                        <li>
+                            <div class="logo">
+                                <a href="#./index.html"><img src="./img/77c3f8418880a56f5f75687c4d268a20.png"
+                                        alt="" /></a>
                             </div>
-                            <form id="form_signup">
+                        </li>
+                        <li class="mt1"><a href="#Home" class="link_header">Home</a></li>
+                        <li class="mt1"><a href="#Services" class="link_header">Services</a></li>
+                        <li class="mt1"><a href="#About Us" class="link_header">About Us</a></li>
+                        <li class="mt1"><a href="#Help" class="link_header">Help Center</a></li>
+                    </ul>
+                    <div class="login">
+                        <a><button id="btn_login_up" onclick="btn_login_up()">Loging</button>
+                            <svg onclick="btn_bar_up()" class="m-display" xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="30" height="40" viewBox="0 0 50 50">
+                                <path
+                                    d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                                </path>
+                            </svg>
+                        </a>
 
-                                <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png" alt="" />
-                                <input type="text" placeholder="Name" name="usernam_signin" id="signin_name" required />
-                                <input type="mail" name="email_sign" placeholder="Email" id="">
-                                <input type="password" placeholder="password" name="passowrd_signin" id="passowrd_sign"
-                                    required />
-                                <input type="password" placeholder="re-password" name="re-passowrd_signin"
-                                    id="re-passowrd_sign" required />
-                                <button type="submit">Signin</button>
-                            </form>
-                        </div>
-                        <div class="login">
-                            <form id="form_login">
+                        <div class="login_page" id="login_page">
+                            <div class="signin">
+                                <div class="login-top">
 
-                                <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png" alt="" />
-                                <input type="emial" placeholder="Emial" name="email_login" id="login_name" required />
-                                <input type="password" placeholder="password" name="passowrd_login" id="passowrd__login"
-                                    required />
-                                <button type="submit">login</button>
-                            </form>
+
+
+                                    <h2 id="btn_Signin" onclick="btn_Sign()">Signup</h2>
+                                    <h2 id="btn_login" style="opacity: 0.5;" onclick="btn_log()">Login</h2>
+                                </div>
+                                <form id="form_signup">
+
+                                    <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png" alt="" />
+                                    <input type="text" placeholder="Name" name="usernam_signin" id="signin_name"
+                                        required />
+                                    <input type="mail" name="email_sign" placeholder="Email" id="">
+                                    <input type="password" placeholder="password" name="passowrd_signin"
+                                        id="passowrd_sign" required />
+                                    <input type="password" placeholder="re-password" name="re-passowrd_signin"
+                                        id="re-passowrd_sign" required />
+                                    <button type="submit">Signin</button>
+                                </form>
+                            </div>
+                            <div class="login">
+                                <form id="form_login">
+
+                                    <img src="./img/wp2952088-anime-wallpaper-hd-1080p.png" alt="" />
+                                    <input type="emial" placeholder="Emial" name="email_login" id="login_name"
+                                        required />
+                                    <input type="password" placeholder="password" name="passowrd_login"
+                                        id="passowrd__login" required />
+                                    <button type="submit">login</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
+                </nav>
+            </div>
+        </header>
+
         <div class="container">
             <section class="sec1 landing_page" id="Home">
                 <div class="sid">
@@ -92,130 +96,133 @@
                     </div>
                 </div>
             </section>
-            <section class="sec2" id="Services">
-                <span>
-                    <img src="../img/second_section_.png">
-
-                </span>
-
-                <div class="super">
-                    <img src="./img/Group 140.png" alt="">
-                    <div>
-                        <h4>Super faster driver</h4>
-                        <p>We only need 45-60 mtnutes to get
-                            yout product tnto your customer's hand'..</p>
-                    </div>
-                </div>
-                <div class="raale">
-                    <img src="./img/Group 152.png" alt="">
-                    <div>
-                        <h4>Real Time Tracking</h4>
-                        <p>Check in any time to see where your celiverv
-                            & when It teach your customer .</p>
-                    </div>
-                </div>
-                <div class="dis">
-                    <img src="./img/Group 1020.png" alt="">
-                    <div>
-                        <h4>Discounts</h4>
-                        <p>Growing from 30 to 300 delrveries a week ?
-                            take advantage of out volurne •based discounts</p>
-                    </div>
-                </div>
-
         </div>
-        <div class="way">
-            <img src="./img/why_kudzoka_bg.png" alt="">
+    </div>
+
+    <section class="sec2" id="Services">
+
+        <img src="../img/second_section_.png">
+
+
+
+        <div class="super">
+            <img src="./img/Group 140.png" alt="">
             <div>
-                <h2>KUDZOKA</h2>
-                <p>why choose </p>
+                <h4>Super faster driver</h4>
+                <p>We only need 45-60 mtnutes to get
+                    yout product tnto your customer's hand'..</p>
             </div>
-            </section>
-
-
         </div>
-        <div class="slider">
-            <div class="card left">
-                <img src="./img/Group 1006.png" alt="">
-                <h2 class="h-sid"></h2>
-                <p class="p-sid"> </p>
+        <div class="raale">
+            <img src="./img/Group 152.png" alt="">
+            <div>
+                <h4>Real Time Tracking</h4>
+                <p>Check in any time to see where your celiverv
+                    & when It teach your customer .</p>
             </div>
-            <div class="card center">
-                <img src="./img/Group 1007.png" alt="">
-                <h2>Round the clock Support</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatum. </p>
-                <div class="arrow arrow-left">
-                    <?xml version="1.0" ?>
-                    <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-                    <svg enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26"
-                        width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <polygon fill="#231F20"
-                            points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 2.049,15.584 -0.035,13.5 " />
-                    </svg>
-                </div>
-                <div class="arrow arrow-right">
-                    <?xml version="1.0" ?>
-                    <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-                    <svg enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26"
-                        width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <polygon fill="#231F20"
-                            points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 " />
-                    </svg>
-                </div>
+        </div>
+        <div class="dis">
+            <img src="./img/Group 1020.png" alt="">
+            <div>
+                <h4>Discounts</h4>
+                <p>Growing from 30 to 300 delrveries a week ?
+                    take advantage of out volurne •based discounts</p>
             </div>
-            <div class="card right">
-                <img src="./img/Group 1008.png" alt="">
-                <h2 class="h-sid"></h2>
-                <p class="p-sid"> </p>
-            </div>
-
         </div>
 
+        <div class="div4all">
+            <img src="img/why_kudzoka_bg.png" alt="">
+            <div>
+                <p>why choose</p>
+                <h3>KUDZOKA</h3>
+            </div>
+        </div>
+    </section>
 
 
-        <footer id="Help">
-            <div class="container">
-                <div class="foot">
-                    <div class="sid_left">
+    </div>
+    <div class="slider">
+        <div class="card left">
+            <img src="./img/Group 1006.png" alt="">
+            <h2 class="h-sid"></h2>
+            <p class="p-sid"> </p>
+        </div>
+        <div class="card center">
+            <img src="./img/Group 1007.png" alt="">
+            <h2>Round the clock Support</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatum. </p>
+            <div class="arrow arrow-left">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26"
+                    width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon fill="#231F20"
+                        points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 2.049,15.584 -0.035,13.5 " />
+                </svg>
+            </div>
+            <div class="arrow arrow-right">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26"
+                    width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon fill="#231F20"
+                        points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 " />
+                </svg>
+            </div>
+        </div>
+        <div class="card right">
+            <img src="./img/Group 1008.png" alt="">
+            <h2 class="h-sid"></h2>
+            <p class="p-sid"> </p>
+        </div>
+
+    </div>
 
 
-                        <div class="app">
-                            <div class="apple">
-                                <img src="./img/apple.png" alt="">
-                                <div>
-                                    <p>Download</p>
-                                    <h3>Apple store</h3>
-                                </div>
-                            </div>
-                            <div class="android"><img src="./img/play-store.png" alt="">
-                                <div>
-                                    <p>Download</p>
-                                    <h3>Play store</h3>
-                                </div>
+
+    <footer id="Help">
+        <div class="container">
+            <div class="foot">
+                <div class="sid_left">
+
+
+                    <div class="app">
+                        <div class="apple">
+                            <img src="./img/apple.png" alt="">
+                            <div>
+                                <p>Download</p>
+                                <h3>Apple store</h3>
                             </div>
                         </div>
-                        <div class="social">
-                            <img src="./img/Icon awesome-instagram.png" alt="instagram" />
-                            <img src="./img/Icon simple-whatsapp.png" alt="whatsapp" />
-                            <img src="./img/Icon feather-facebook.png" alt="facebook" />
-                        </div>
-                        <div class="links">
-                            <a href="#Home">Home</a>
-                            <a href="#Services">Services</a>
-                            <a href="#About">About Us</a>
-                            <a href="#Help">Help Center</a>
+                        <div class="android"><img src="./img/play-store.png" alt="">
+                            <div>
+                                <p>Download</p>
+                                <h3>Play store</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="img">
-                        <img src="./img/removebg-preview.png" alt="">
+                    <div class="social">
+                        <img src="./img/Icon awesome-instagram.png" alt="instagram" />
+                        <img src="./img/Icon simple-whatsapp.png" alt="whatsapp" />
+                        <img src="./img/Icon feather-facebook.png" alt="facebook" />
+                    </div>
+                    <div class="links">
+                        <a href="#Home">Home</a>
+                        <a href="#Services">Services</a>
+                        <a href="#About">About Us</a>
+                        <a href="#Help">Help Center</a>
                     </div>
                 </div>
+                <div class="img">
+                    <img src="./img/removebg-preview.png" alt="">
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
