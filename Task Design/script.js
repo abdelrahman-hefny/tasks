@@ -40,7 +40,7 @@ document.querySelectorAll('.mt1 a').forEach(link => {
         m_bar = !m_bar;
 
         mt1.forEach(e => {
-            e.style.display = 'none';
+            // e.style.display = 'none';
         });
     });
 }); const overlay = document.getElementById("overlay");

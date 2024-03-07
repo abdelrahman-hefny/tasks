@@ -11,13 +11,23 @@ a {
   color: #222;
 }
 
-body {
+.bg {
+  width: 100%;
+  height: 195%;
+  position: absolute;
+  top: 0;
+  right: 0;
   background-image: url("./img/blue_bg.png");
   background-repeat: no-repeat;
   background-size: 100% 50%;
   width: 100%;
 }
 
+@media (max-width: 777px) {
+  .bg {
+    height: 125%;
+  }
+}
 .container {
   width: 90%;
   margin: 40px auto;
@@ -163,6 +173,7 @@ header .login form button {
 
 .sec1 {
   width: 100%;
+  margin-top: 200px;
 }
 .sec1 .sid {
   display: flex;
@@ -223,12 +234,14 @@ header .login form button {
   color: #222;
   text-align: left;
   width: 382px;
+  font-family: sans-serif;
 }
 .sec1 .text p {
   margin: 20px 0;
   color: #222;
   font-size: calc(18px + 0.3vw);
   text-align: left;
+  font-family: sans-serif;
 }
 
 .m-display {
@@ -248,7 +261,29 @@ header .login form button {
     padding: 0;
     text-align: center;
   }
+  .sec2 > div {
+    width: 80% !important;
+  }
+  .sec2 h4 {
+    font-size: 30px;
+    margin: 15px 0;
+  }
+  .sec2 p {
+    font-size: 20px;
+  }
+  .raale {
+    top: 36px;
+  }
+  .dis {
+    top: 90px;
+  }
 }
+.sec2 h4,
+.sec2 p {
+  text-align: center;
+  color: #3b3a3a;
+}
+
 @media only screen and (max-width: 1090px) {
   .img img {
     margin-left: -100px;
@@ -322,10 +357,9 @@ header .login form button {
   }
 }
 footer {
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
-  bottom: 0;
-  margin: 0;
+  bottom: -141px;
   padding: 0;
 }
 footer .container {
@@ -344,11 +378,54 @@ footer .container {
   margin: 0;
   padding: 0;
   left: -30px;
+  bottom: -150px;
+}
+footer .social img {
+  margin: 10px;
 }
 footer .sid_left {
   position: absolute;
-  bottom: 30px;
+  bottom: 160px;
   left: 110px;
+}
+footer .sid_left .links a {
+  color: #fff;
+  margin: 10px;
+}
+
+.app {
+  display: flex;
+  gap: 10px;
+}
+.app .apple,
+.app .android {
+  width: 130px;
+  background-color: #fff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+.app .apple img,
+.app .android img {
+  width: 19%;
+}
+.app .apple div,
+.app .android div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app .apple div p,
+.app .android div p {
+  font-size: 13px;
+}
+.app .apple div h3,
+.app .android div h3 {
+  font-size: 17px;
 }
 
 #mobile_overlay {
@@ -406,25 +483,61 @@ body {
 }
 
 .sec2 {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
-.super, .raale, .dis {
+.super,
+.raale,
+.dis {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* تغيير المسافة بين العناصر إذا لزم الأمر */
+  margin-bottom: 20px;
+  /* تغيير المسافة بين العناصر إذا لزم الأمر */
 }
 
-.super img, .raale img, .dis img {
-  max-width: 100%; /* لضمان تناسب الصور مع حجم الشاشة */
+.raale {
+  top: 130px;
 }
 
-.super, .raale {
-  order: -1; /* يجعل العنصرين الأول والثاني يظهران أعلى الصفحة */
+section.sec2 > span {
+  position: absolute;
+  top: 33%;
+  left: 40px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+section.sec2 > span span img {
+  width: 85%;
+  height: 210%;
+  margin: auto;
+}
+
+.dis {
+  top: 330px;
+}
+
+.super img,
+.raale img,
+.dis img {
+  max-width: 50%;
+  /* لضمان تناسب الصور مع حجم الشاشة */
+}
+
+.super,
+.raale {
+  order: -1;
+  /* يجعل العنصرين الأول والثاني يظهران أعلى الصفحة */
 }
 
 .way {
@@ -436,6 +549,8 @@ body {
 
 .way img {
   max-width: 100%;
+  top: 200px;
+  position: relative;
 }
 
 .sec2 {
@@ -470,19 +585,113 @@ body {
 .sec2 > div {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 30%;
 }
 
-@media only screen and (min-width: 768px) {
-  .sec2 {
-    flex-direction: row; /* تغيير توجيه العناصر إلى الأفقي على الأجهزة الكبيرة */
-    justify-content: space-around; /* توزيع العناصر بالتساوي على الأجهزة الكبيرة */
+@media only screen and (max-width: 768px) {
+  footer {
+    margin-top: 100px;
   }
-  .super, .raale, .dis {
-    width: 30%; /* تحديد عرض العناصر على الأجهزة الكبيرة */
-    margin-bottom: 0; /* إزالة المسافة بين العناصر على الأجهزة الكبيرة */
+  section.sec2 > span img {
+    display: none;
   }
   .way {
-    width: 25%; /* تحديد عرض العنصر على الأجهزة الكبيرة */
+    width: 25%;
+    /* تحديد عرض العنصر على الأجهزة الكبيرة */
+  }
+  .super {
+    top: 50%;
+  }
+  .raale {
+    top: 220px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .sec2 {
+    flex-direction: row;
+    /* تغيير توجيه العناصر إلى الأفقي على الأجهزة الكبيرة */
+    justify-content: space-around;
+    /* توزيع العناصر بالتساوي على الأجهزة الكبيرة */
+  }
+  .super,
+  .raale,
+  .dis {
+    width: 30%;
+    /* تحديد عرض العناصر على الأجهزة الكبيرة */
+    margin-bottom: 0;
+    /* إزالة المسافة بين العناصر على الأجهزة الكبيرة */
+  }
+  .way {
+    width: 25%;
+    /* تحديد عرض العنصر على الأجهزة الكبيرة */
+  }
+  .super {
+    top: 50%;
+  }
+  .raale {
+    top: 220px;
+  }
+  .dis {
+    top: 410px;
+  }
+}
+.way > div {
+  position: relative;
+  top: 6em;
+}
+.way > div h2,
+.way > div p {
+  display: block;
+  color: #fff;
+}
+
+@media only screen and (min-width: 900px) {
+  span img {
+    width: 89%;
+    height: 210%;
+    margin: auto;
+  }
+  footer .img img {
+    right: 15% !important;
+  }
+  .way > div {
+    position: relative;
+    top: 3em;
+  }
+}
+footer .img img {
+  /* margin-left: -100px; */
+  position: absolute;
+  right: 5%;
+  width: 450px;
+  bottom: 130px;
+}
+
+@media only screen and (max-width: 768px) {
+  section.sec2 > span img {
+    display: none;
+  }
+  .way {
+    width: 25%;
+    /* تحديد عرض العنصر على الأجهزة الكبيرة */
+  }
+  .super {
+    top: 50%;
+  }
+  .raale {
+    top: 40px;
+  }
+  .dis {
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .way {
+    width: 50%;
+    margin: auto;
+  }
+  .way > div {
+    position: relative;
+    top: 4em;
   }
 }

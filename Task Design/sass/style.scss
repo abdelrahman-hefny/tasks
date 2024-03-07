@@ -14,11 +14,22 @@ a {
     color: #222;
 }
 
-body {
+.bg {
+    width: 100%;
+    height: 195%;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-image: url('./img/blue_bg.png');
     background-repeat: no-repeat;
     background-size: 100% 50%;
     width: 100%;
+}
+
+@media (max-width:777px) {
+    .bg {
+        height: 125%;
+    }
 }
 
 .container {
@@ -165,8 +176,9 @@ header {
         }
     }
 }
+
 ::selection {
-    background-color:#753f8e ;// اللون المطلوب بشكل خفيف
+    background-color: #753f8e; // اللون المطلوب بشكل خفيف
     color: #fff; // لون النص
 }
 
@@ -188,6 +200,7 @@ header {
 
 .sec1 {
     width: 100%;
+    margin-top: 200px;
 
     .sid {
         display: flex;
@@ -260,6 +273,7 @@ header {
             color: #222;
             text-align: left;
             width: 382px;
+            font-family: sans-serif;
         }
 
         p {
@@ -267,6 +281,7 @@ header {
             color: #222;
             font-size: calc(18px + 0.3vw);
             text-align: left;
+            font-family: sans-serif;
         }
     }
 }
@@ -291,7 +306,37 @@ header {
         padding: 0;
         text-align: center;
     }
+
+    .sec2>div {
+
+        width: 80% !important;
+    }
+
+    .sec2 h4 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .sec2 p {
+        font-size: 20px;
+    }
+
+    .raale {
+        top: 36px;
+    }
+
+    .dis {
+        top: 90px;
+    }
 }
+
+.sec2 h4,
+.sec2 p {
+    text-align: center;
+    color: #3b3a3a;
+}
+
+@media (max-width: 768px) {}
 
 @media only screen and (max-width: 1090px) {
     .img img {
@@ -306,7 +351,7 @@ header {
         .text {
             margin: auto;
 
-           
+
             h1 {
                 text-align: center !important;
             }
@@ -385,10 +430,9 @@ header {
 
 // Footer styles
 footer {
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
-    bottom: 0;
-    margin: 0;
+    bottom: -141px;
     padding: 0;
 
     .container {
@@ -407,12 +451,62 @@ footer {
         margin: 0;
         padding: 0;
         left: -30px;
+        bottom: -150px;
+    }
+
+    .social img {
+        margin: 10px;
     }
 
     .sid_left {
         position: absolute;
-        bottom: 30px;
+        bottom: 160px;
         left: 110px;
+
+        .links {
+            a {
+                color: #fff;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.app {
+    display: flex;
+    gap: 10px;
+
+    .apple,
+    .android {
+        width: 130px;
+        background-color: #fff;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px;
+
+        img {
+            width: 19%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+
+                font-size: 13px;
+
+            }
+
+            h3 {
+                font-size: 17px;
+            }
+        }
     }
 }
 
@@ -469,26 +563,67 @@ body {
     right: -20px;
     left: 220px;
 }
+
 .sec2 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 
-.super, .raale, .dis {
+.super,
+.raale,
+.dis {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* تغيير المسافة بين العناصر إذا لزم الأمر */
+    margin-bottom: 20px;
+    /* تغيير المسافة بين العناصر إذا لزم الأمر */
 }
 
-.super img, .raale img, .dis img {
-    max-width: 100%; /* لضمان تناسب الصور مع حجم الشاشة */
+.super {}
+
+.raale {
+    top: 130px;
+
 }
 
-.super, .raale {
-    order: -1; /* يجعل العنصرين الأول والثاني يظهران أعلى الصفحة */
+section.sec2>span {
+    position: absolute;
+    top: 33%;
+    left: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(5deg);
+    z-index: -1;
+
+    span img {
+        width: 85%;
+        height: 210%;
+        margin: auto;
+    }
+}
+
+.dis {
+    top: 330px
+}
+
+.super img,
+.raale img,
+.dis img {
+    max-width: 50%;
+    /* لضمان تناسب الصور مع حجم الشاشة */
+}
+
+.super,
+.raale {
+    order: -1;
+    /* يجعل العنصرين الأول والثاني يظهران أعلى الصفحة */
 }
 
 .way {
@@ -496,18 +631,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .way img {
     max-width: 100%;
+    top: 200px;
+    position: relative;
 }
+
 .sec2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.sec2 > div {
+.sec2>div {
     width: calc(50% - 20px);
     margin: 10px;
 }
@@ -529,24 +668,148 @@ body {
 .sec2 .way div {
     text-align: center;
 }
-.sec2 >div{
+
+.sec2>div {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+
+        margin-top: 100px;
+    }
+
+    section.sec2>span img {
+        display: none;
+
+    }
+
+    .way {
+        width: 25%;
+        /* تحديد عرض العنصر على الأجهزة الكبيرة */
+    }
+
+    .super {
+        top: 50%;
+    }
+
+    .raale {
+        top: 220px;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
     .sec2 {
-        flex-direction: row; /* تغيير توجيه العناصر إلى الأفقي على الأجهزة الكبيرة */
-        justify-content: space-around; /* توزيع العناصر بالتساوي على الأجهزة الكبيرة */
+        flex-direction: row;
+        /* تغيير توجيه العناصر إلى الأفقي على الأجهزة الكبيرة */
+        justify-content: space-around;
+        /* توزيع العناصر بالتساوي على الأجهزة الكبيرة */
     }
 
-    .super, .raale, .dis {
-        width: 30%; /* تحديد عرض العناصر على الأجهزة الكبيرة */
-        margin-bottom: 0; /* إزالة المسافة بين العناصر على الأجهزة الكبيرة */
+    .super,
+    .raale,
+    .dis {
+        width: 30%;
+        /* تحديد عرض العناصر على الأجهزة الكبيرة */
+        margin-bottom: 0;
+        /* إزالة المسافة بين العناصر على الأجهزة الكبيرة */
     }
 
     .way {
-        width: 25%; /* تحديد عرض العنصر على الأجهزة الكبيرة */
+        width: 25%;
+        /* تحديد عرض العنصر على الأجهزة الكبيرة */
+    }
+
+    .super {
+        top: 50%;
+    }
+
+    .raale {
+        top: 220px;
+    }
+
+    .dis {
+        top: 410px;
+    }
+}
+
+
+.way>div {
+    position: relative;
+    top: 6em;
+
+    h2,
+    p {
+        display: block;
+        color: #fff;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    span img {
+        width: 89%;
+        height: 210%;
+        margin: auto;
+    }
+
+    footer .img img {
+        right: 15% !important;
+
+    }
+
+    .way>div {
+        position: relative;
+        top: 3em;
+
+    }
+}
+
+footer .img img {
+
+    /* margin-left: -100px; */
+    position: absolute;
+    right: 5%;
+    width: 450px;
+    bottom: 130px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    section.sec2>span img {
+        display: none;
+
+    }
+
+    .way {
+        width: 25%;
+        /* تحديد عرض العنصر على الأجهزة الكبيرة */
+    }
+
+    .super {
+        top: 50%;
+    }
+
+    .raale {
+        top: 40px;
+    }
+
+    .dis {
+        top: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .way {
+        width: 50%;
+        margin: auto;
+    }
+
+    .way>div {
+        position: relative;
+        top: 4em;
     }
 }
