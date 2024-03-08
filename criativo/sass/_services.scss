@@ -1,0 +1,167 @@
+.our_services {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .container {
+        display: flex;
+        gap: 20px;
+
+        .sid_left {
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+
+            p {
+                margin: 10px 0;
+                line-height: 1.8;
+            }
+
+            &>p:first-child {
+                color: $m-color;
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            h2 {
+                font-size: $m-font;
+                margin-top: 15px;
+            }
+
+            button {
+                width: fit-content;
+                margin-top: 20px;
+                border-radius: 2px;
+            }
+
+            .button-58 {
+                align-items: center;
+                background-color: $m-color;
+                border: 0;
+                box-sizing: border-box;
+                padding: 0 17px;
+                color: #fff;
+                cursor: pointer;
+                height: 38px;
+                display: inline-flex;
+                min-width: 90px;
+                transition-duration: .4s;
+                margin: auto;
+                &:focus {
+                    color: #171e29;
+                }
+
+                &:hover {
+                    background-color: #5cd2b986;
+                    border-color: $m-color;
+                    fill: $m-color;
+                    transition-duration: .4s;
+                    transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
+                }
+            }
+        }
+
+        .sid_right {
+            display: grid;
+            gap: 20px; // تغيير المسافة بين الصناديق
+            grid-template-columns: repeat(2, minmax(170px, 1fr)); // عرض صناديق كل اثنين جنبًا إلى جنب
+
+            .box {
+                border-radius: 1px;
+                max-width: 200;
+                max-height: 200; // تعيين ارتفاع مساوي للعرض لجعله مربعًا
+                background-color: #fff;
+                padding: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    width: 30%;
+                }
+            }
+
+
+
+            .box1,
+            .box3 {
+                background-color: $th-color;
+            }
+
+            .box2,
+            .box4 {
+                background: linear-gradient(to bottom, transparent, #5cd2b934);
+                margin: 20px 0 -20px 0;
+
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .button-58 {
+        min-width: 70px;
+    }
+}
+
+/* استهدف الأجهزة التي يكون عرض الشاشة أقل من 600 بكسل */
+@media only screen and (max-width: 700px) {
+    .our_services .container .sid_left {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .our_services .container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.box {
+
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition-duration: .5s;
+    display: flex;
+    gap: 10px;
+    position: relative; // إضافة هذه الخاصية للعناصر لتمكين الانميشن
+
+    &:hover {
+        transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+    }
+
+    img {
+        width: 30%;
+    }
+
+    h3,
+    p {
+        transition-duration: .5s;
+        transition: all 0.3s ease; // تحديد انتقال لجميع الخصائص (الحجم، اللون، الخلفية، إلخ)
+    }
+
+    &:hover {
+        h3 {
+            color: $m-color; // تغيير لون العنوان عند تحويل الماوس (hover)
+        }
+
+        p {
+            transition-duration: .5s;
+            color: $m-color; // تغيير لون الفقرة عند تحويل الماوس (hover)
+        }
+
+        img {
+            transition-duration: .5s;
+            transform: scale(1.1); // تكبير الصورة عند تحويل الماوس (hover)
+        }
+    }
+}

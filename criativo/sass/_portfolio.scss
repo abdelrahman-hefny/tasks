@@ -1,0 +1,41 @@
+.portfolio {
+
+    .container {
+        text-align: center;
+        flex-direction: column;
+
+        h4 {
+            color: $m-color;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: $m-font;
+
+        }
+
+        hr {
+
+            width: 50px;
+            margin: 0 auto 20px;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .img {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); // ثلاثة أعمدة متساوية
+            gap: 20px;
+
+            img {
+                width: 100%; // تأكيد تمتد الصور لتملئ العمود بالكامل
+                height: auto; // التأكد من عدم التأثير على نسب الارتفاع
+            }
+        }
+    }
+}

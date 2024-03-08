@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+
+    a {
+        color: #ffffff;
+    }
+
+    H1,
+    h2,
+    H3,
+    h4,
+    P,
+    SPAN {
+        COLOR: #fff;
+    }
+
+}
+
+//body
+body {
+    background: #000;
+}
+
+// global varibal
+$m-color: #5cd2b9;
+$nav-color: #151515;
+$th-color: #0d0e0e;
+$p-color: #979797;
+$m-font: 40px;
+$sec-font: 15px;
+$m-margin: 15px;
+
+
+span {
+    color: $m-color;
+}
+
+hr {
+    width: 75px;
+    border-color: #5cd2b9;
+    margin: 15px 0;
+}
+
+p {
+    color: #979797;
+
+    line-height: 1.5;
+}
+
+/* استهدف الأجهزة التي يكون عرض الشاشة أقل من 600 بكسل */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
+/* استهدف الأجهزة التي يكون عرض الشاشة بين 601 بكسل و 900 بكسل */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 95%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+}
+
+/* استهدف الأجهزة التي يكون عرض الشاشة أكبر من 900 بكسل */
+@media only screen and (min-width: 901px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}

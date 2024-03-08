@@ -1,0 +1,198 @@
+header {
+    background-color: $nav-color;
+    position: relative;
+    z-index: 4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    //LOGO
+    .logo a {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        h2 {
+            color: $m-color;
+            font-size: 40px;
+
+        }
+
+        span {
+            color: #fff;
+            letter-spacing: 3px;
+            font-size: 5px;
+        }
+    }
+
+    nav {
+        input {
+            width: 50%;
+            margin: 28px 0 0 0;
+            position: absolute;
+            padding: 10px;
+            transition-duration: 0.4s;
+            border-radius: 5px;
+            border: 0;
+            font-size: 14px;
+
+
+            &:focus {
+                outline: $m-color solid 1px;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            li a {
+                transition-duration: .4s;
+            }
+
+            li a:hover {
+                color: $m-color;
+            }
+
+            li a svg {
+                color: $m-color;
+            }
+
+        }
+
+        .input-search-close {
+            display: none;
+        }
+    }
+}
+
+//togle menu 
+.toggle_bar {
+    display: none;
+    transition-duration: .4s;
+
+    &:hover {
+        transform: scale(1.2); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
+    }
+
+}
+
+li {
+ transition-duration: .4s;
+    &:hover {
+        transform: scale(1.1); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
+    }
+}
+
+//media quiry 
+
+/* استهدف الأجهزة التي يكون عرض الشاشة أقل من 600 بكسل */
+@media only screen and (max-width: 600px) {
+    header .container {
+        position: relative;
+        z-index: 4;
+
+        nav {
+            background-color: $nav-color;
+            z-index: 4;
+            position: absolute;
+            top: 71px;
+            right: 0;
+            width: 100%;
+
+            ul {
+
+                flex-direction: column;
+
+                li {
+                    padding: 10px 0;
+                }
+
+                li a {
+                    padding: 10px;
+                }
+
+                li:last-child {
+                    position: absolute;
+                    top: -53px;
+                    right: 60px;
+                    font-size: 21px;
+                    transition-duration: .4s;
+
+                    &:hover {
+                        transform: scale(1.2); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
+                    }
+                }
+            }
+        }
+    }
+
+    .container nav input {
+        width: 80%;
+        margin: 5px auto 20px;
+        position: absolute;
+        padding: 15px;
+        transition-duration: 0.4s;
+        border-radius: 5px;
+        border: 0;
+        right: 50%;
+        font-size: 14px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 2%);
+    }
+
+    .toggle_bar {
+        width: 20px;
+        font-size: 30px;
+        margin-right: 20px;
+        margin-bottom: -12px;
+        color: #fff;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav_ul.open {
+        display: none;
+    }
+
+
+}
+
+/* استهدف الأجهزة التي يكون عرض الشاشة بين 601 بكسل و 900 بكسل */
+@media only screen and (min-width: 601px) and (max-width: 750px) {
+    .container .logo a h2 {
+        font-size: 40px;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width:8990px) {
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+
+}
+
+
+/* استهدف الأجهزة التي يكون عرض الشاشة أكبر من 900 بكسل */
+@media only screen and (min-width: 901px) and (max-width:1030px) {
+    .container nav ul li a {
+        font-size: 18px;
+    }
+}
