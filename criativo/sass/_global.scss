@@ -36,6 +36,10 @@ $m-font: 40px;
 $sec-font: 15px;
 $m-margin: 15px;
 
+h2 {
+    font-size: 40px;
+    margin-top: 15px;
+}
 
 span {
     color: $m-color;
@@ -51,6 +55,15 @@ p {
     color: #979797;
 
     line-height: 1.5;
+}
+
+p.p {
+    color: #5cd2b9;
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    margin: 10px 0;
+    line-height: 1.8;
 }
 
 /* استهدف الأجهزة التي يكون عرض الشاشة أقل من 600 بكسل */

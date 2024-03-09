@@ -2,6 +2,7 @@
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     .container {
         display: flex;
@@ -47,6 +48,7 @@
                 min-width: 90px;
                 transition-duration: .4s;
                 margin: auto;
+
                 &:focus {
                     color: #171e29;
                 }
@@ -99,6 +101,47 @@
             }
         }
     }
+
+    .box {
+
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        transition-duration: .5s;
+        display: flex;
+        gap: 10px;
+        position: relative; // إضافة هذه الخاصية للعناصر لتمكين الانميشن
+
+        &:hover {
+            transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+        }
+
+        img {
+            width: 30%;
+        }
+
+        h3,
+        p {
+            transition-duration: .5s;
+            transition: all 0.3s ease; // تحديد انتقال لجميع الخصائص (الحجم، اللون، الخلفية، إلخ)
+        }
+
+        &:hover {
+            h3 {
+                color: $m-color; // تغيير لون العنوان عند تحويل الماوس (hover)
+            }
+
+            p {
+                transition-duration: .5s;
+                color: $m-color; // تغيير لون الفقرة عند تحويل الماوس (hover)
+            }
+
+            img {
+                transition-duration: .5s;
+                transform: scale(1.1); // تكبير الصورة عند تحويل الماوس (hover)
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -122,46 +165,5 @@
         gap: 20px;
         flex-direction: column;
         align-items: center;
-    }
-}
-
-.box {
-
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    transition-duration: .5s;
-    display: flex;
-    gap: 10px;
-    position: relative; // إضافة هذه الخاصية للعناصر لتمكين الانميشن
-
-    &:hover {
-        transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
-    }
-
-    img {
-        width: 30%;
-    }
-
-    h3,
-    p {
-        transition-duration: .5s;
-        transition: all 0.3s ease; // تحديد انتقال لجميع الخصائص (الحجم، اللون، الخلفية، إلخ)
-    }
-
-    &:hover {
-        h3 {
-            color: $m-color; // تغيير لون العنوان عند تحويل الماوس (hover)
-        }
-
-        p {
-            transition-duration: .5s;
-            color: $m-color; // تغيير لون الفقرة عند تحويل الماوس (hover)
-        }
-
-        img {
-            transition-duration: .5s;
-            transform: scale(1.1); // تكبير الصورة عند تحويل الماوس (hover)
-        }
     }
 }

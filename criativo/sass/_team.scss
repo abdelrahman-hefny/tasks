@@ -1,0 +1,97 @@
+.team {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .text_top {
+            text-align: center;
+            margin-bottom: 20px;
+
+            p {
+                margin-bottom: 10px;
+                font-size: 1.2rem; // Responsive font size
+            }
+
+            h2 {
+                margin-bottom: 10px;
+                font-size: 2rem; // Responsive font size
+            }
+
+            hr {
+                width: 50px;
+                border: 1px solid #000;
+                margin: 20px auto;
+            }
+        }
+
+        .text_bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 48%);
+            gap: 20px;
+
+            .box {
+                background-color: $th-color;
+                padding: 20px;
+                display: flex;
+
+                .sid_left {
+                    width: fit-content;
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        filter: grayscale(1);
+                    }
+                }
+
+                .sid_right {
+
+                    h3 {
+                        font-size: 1rem; // Responsive font size
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 1rem; // Responsive font size
+                        margin-bottom: 10px;
+                        margin-top: 40px;
+                        line-height: 2;
+                        font-size: 12px;
+                    }
+
+
+                    .p {
+                        font-size: 11px;
+                        letter-spacing: 1.4px;
+                        margin-top: 20px;
+                    }
+
+                    .icons {
+                        i {
+                            margin-right: 10px;
+                            font-size: 1rem; // Adjust size as needed
+                            color: $m-color;
+                        }
+
+                        color: $m-color;
+                        display: flex;
+                        gap: 15px;
+                    }
+                }
+            }
+        }
+
+        // Responsive styling
+        @media (max-width: 768px) {
+            .text_bottom {
+                grid-template-columns: 100%;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
