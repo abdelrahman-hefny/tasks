@@ -793,6 +793,7 @@ footer .container .copy_right a {
 .landing_page {
   position: relative;
   background-color: #0c0c0c;
+  overflow-y: hidden;
 }
 .landing_page H1,
 .landing_page H3,
@@ -806,7 +807,7 @@ footer .container .copy_right a {
 .landing_page .img img {
   width: 50%;
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   right: 0;
 }
 .landing_page .container {

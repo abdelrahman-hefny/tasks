@@ -2,6 +2,7 @@
     position: relative;
     background-color: #0c0c0c;
 
+    overflow-y: hidden;
     H1,
     H3,
     P,
@@ -15,7 +16,7 @@
         img {
             width: 50%;
             position: absolute;
-            bottom: 0;
+            bottom: -50px;
             right: 0;
         }
     }
