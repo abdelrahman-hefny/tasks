@@ -996,9 +996,36 @@ footer .container .copy_right a {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.portfolio .container .img img {
+.portfolio .container .img .image-wrapper {
+  position: relative;
+  transition-duration: 0.6s;
+}
+.portfolio .container .img .image-wrapper:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.portfolio .container .img .image-wrapper img {
   width: 100%;
   height: auto;
+}
+.portfolio .container .img .image-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.portfolio .container .img .image-wrapper .overlay span {
+  display: block;
+  font-size: 18px;
+}
+.portfolio .container .img .image-wrapper:hover .overlay {
+  opacity: 1;
 }
 
 section.project {

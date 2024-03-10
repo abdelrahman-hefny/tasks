@@ -1,9 +1,7 @@
 .portfolio {
-
     .container {
         text-align: center;
         flex-direction: column;
-
 
         h4 {
             color: $m-color;
@@ -14,11 +12,9 @@
         h2 {
             margin: 10px 0;
             font-size: $m-font;
-
         }
 
         hr {
-
             width: 50px;
             margin: 0 auto 20px;
         }
@@ -33,10 +29,42 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr); // ثلاثة أعمدة متساوية
             gap: 20px;
+          
+            .image-wrapper {
+                position: relative;  transition-duration: .6s;
+            &:hover{
+                transform: scale(1.04);
+                cursor: pointer;
+            }
 
-            img {
-                width: 100%; // تأكيد تمتد الصور لتملئ العمود بالكامل
-                height: auto; // التأكد من عدم التأثير على نسب الارتفاع
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 20px;
+                    text-align: center;
+                    color: white;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+
+                    span {
+                        display: block;
+                        font-size: 18px;
+                     
+                    }
+                }
+
+                &:hover .overlay {
+                    opacity: 1;
+                }
             }
         }
     }
