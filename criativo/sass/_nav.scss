@@ -1,96 +1,102 @@
 header {
     background-color: $nav-color;
     position: relative;
-    z-index: 4;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
+    z-index: 444;
+    width: 100%;
     align-items: center;
-    margin: auto;
+    display: flex;
 
-    //LOGO
-    .logo a {
-        align-items: center;
+
+
+    .container {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        cursor: pointer;
+        margin: auto;
 
-        h2 {
-            color: $m-color;
-            font-size: 40px;
-
-        }
-
-        span {
-            color: #fff;
-            letter-spacing: 3px;
-            font-size: 5px;
-        }
-    }
-
-    nav {
-        input {
-            width: 50%;
-            margin: 28px 0 0 0;
-            position: absolute;
-            padding: 10px;
-            transition-duration: 0.4s;
-            border-radius: 5px;
-            border: 0;
-            font-size: 14px;
-
-
-            &:focus {
-                outline: $m-color solid 1px;
-            }
-        }
-
-        ul {
-            display: flex;
+        //LOGO
+        .logo a {
             align-items: center;
-            justify-content: center;
-            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
 
-            li a {
-                transition-duration: .4s;
-            }
-
-            li a:hover {
+            h2 {
                 color: $m-color;
+                font-size: 40px;
+
             }
 
-            li a svg {
-                color: $m-color;
+            span {
+                color: #fff;
+                letter-spacing: 3px;
+                font-size: 5px;
             }
+        }
+
+        nav {
+            input {
+                width: 50%;
+                margin: 28px 0 0 0;
+                position: absolute;
+                padding: 10px;
+                transition-duration: 0.4s;
+                border-radius: 5px;
+                border: 0;
+                font-size: 14px;
+
+
+                &:focus {
+                    outline: $m-color solid 1px;
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                li a {
+                    transition-duration: .4s;
+                }
+
+                li a:hover {
+                    color: $m-color;
+                }
+
+                li a svg {
+                    color: $m-color;
+                }
+
+            }
+
+            .input-search-close {
+                display: none;
+            }
+        }
+    }
+
+    //togle menu 
+    .toggle_bar {
+        display: none;
+        transition-duration: .4s;
+
+        &:hover {
+            transform: scale(1.2); // تكبير حجم الصندوق عند تحويل الماوس (hover)
 
         }
 
-        .input-search-close {
-            display: none;
+    }
+
+    li {
+        transition-duration: .4s;
+
+        &:hover {
+            transform: scale(1.1); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
         }
-    }
-}
-
-//togle menu 
-.toggle_bar {
-    display: none;
-    transition-duration: .4s;
-
-    &:hover {
-        transform: scale(1.2); // تكبير حجم الصندوق عند تحويل الماوس (hover)
-
-    }
-
-}
-
-li {
- transition-duration: .4s;
-    &:hover {
-        transform: scale(1.1); // تكبير حجم الصندوق عند تحويل الماوس (hover)
-
     }
 }
 
@@ -106,7 +112,7 @@ li {
             background-color: $nav-color;
             z-index: 4;
             position: absolute;
-            top: 71px;
+            top: 47px;
             right: 0;
             width: 100%;
 
@@ -124,10 +130,11 @@ li {
 
                 li:last-child {
                     position: absolute;
-                    top: -53px;
-                    right: 60px;
-                    font-size: 21px;
-                    transition-duration: .4s;
+                    top: -43px;
+                    right: 65px;
+                    z-index: 22222224;
+                    font-size: 21px !important;
+                    transition-duration: 0.4s;
 
                     &:hover {
                         transform: scale(1.2); // تكبير حجم الصندوق عند تحويل الماوس (hover)
@@ -139,7 +146,7 @@ li {
     }
 
     .container nav input {
-        width: 80%;
+        width: 80%!important;
         margin: 5px auto 20px;
         position: absolute;
         padding: 15px;
@@ -148,24 +155,24 @@ li {
         border: 0;
         right: 50%;
         font-size: 14px;
-        top: 0;
+        top: -22px;
         left: 50%;
         transform: translate(-50%, 2%);
     }
-
+ .nav_ul.open {
+        display: none;
+    }
     .toggle_bar {
         width: 20px;
         font-size: 30px;
         margin-right: 20px;
         margin-bottom: -12px;
         color: #fff;
-        display: block;
+        display: block!important;
         cursor: pointer;
     }
 
-    .nav_ul.open {
-        display: none;
-    }
+   
 
 
 }

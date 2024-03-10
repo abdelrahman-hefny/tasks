@@ -1,0 +1,101 @@
+.blog .container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.blog .container p,
+.blog .container h2,
+.blog .container hr,
+.blog .container .box1 {
+    margin-bottom: 20px;
+}
+
+.blog .container .sid_button {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* للسماح بالتفاف الصناديق عند التصغير */
+}
+
+.blog .container .box1 {
+transition-duration: .4s;
+&:hover{
+    transform: scale(1.04);
+    
+}
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    text-align: left;
+    display: inline-block;
+    /* جعل الصندوق عنصرا مستطيلا */
+    box-sizing: border-box;
+    /* يضمن أن الهوامش والحدود لن تزيد عن الحجم المحدد */
+    vertical-align: top;
+    /* تحديد موضع العنصر في العمود العلوي */
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: $m-color;
+    }
+
+    .foot {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        i,
+        svg {
+            margin-right: 5px;
+            color: $m-color;
+        }
+
+        p:last-child {
+            color: $m-color;
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog .container .box1 {
+        width: 100%;
+        margin-bottom: 20px;
+        /* إضافة هامش للتحكم في المسافة بين الصناديق */
+    }
+}
+
+@media (max-width: 999px) {
+    .blog .container .box1 {
+        h3 {
+            font-size: 16px;
+        }
+
+        /* إضافة هامش للتحكم في المسافة بين الصناديق */
+    }
+}
+
+@media (max-width:757px) {
+    .blog {
+        .sid_button {
+            display: flex;
+            flex-direction: column;
+
+            .box1 {
+                max-width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}

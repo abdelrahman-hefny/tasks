@@ -1,0 +1,155 @@
+.contactUS {
+    position: relative;
+padding: 20px 0;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/—Pngtree—worldmap\ gradien\ blue\ and\ pink_7424373.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: invert(51%) sepia(92%) saturate(3437%) hue-rotate(140deg) brightness(95%) contrast(102%) ;
+
+        z-index: 2;
+        opacity: 0.2;
+        /* جعل الخلفية شفافة */
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:#5a6a67;
+        
+
+        z-index: 2;
+        opacity: 0.2;
+        /* جعل الخلفية شفافة */
+    }
+
+    .container {
+        z-index: 4;
+        gap: 30px;
+
+
+        form {
+            border: $m-color 1px solid;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+
+            // width: 48%;
+            position: relative;
+           
+            z-index: 4;
+
+
+            lable {
+                color: $m-color;
+                font-size: 17px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                right: 50%;
+                left: 60%;
+                transform: translate(-50%, 0);
+
+                width: 100%;
+                gap: 10px;
+                margin: 10px auto;
+            }
+
+            input {
+                border: $m-color 1px solid;
+                outline: $m-color solid 1px;
+                width: 80%;
+                font-size: 15px;
+                font-weight: bold;
+                color: #fff;
+                padding: 10px;
+                background-color: #00000042;
+                transition-duration: .4s;
+
+                &:focus {
+                    transform: scaleX(1.1);
+                }
+
+                &#message {
+                    font-weight: normal;
+                    height: 100px;
+                }
+            }
+
+        }
+
+        .sid_right {
+        
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            // width: 48%;
+            .contact {
+
+
+                h3 {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                p,
+                p.p {
+                    letter-spacing: normal !important;
+                    font-size: 12px;
+
+
+                }
+
+                i,
+                svg {
+                    color: $m-color;
+                    font-size: 25px;
+                    margin-right: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .contactUS {
+        .container {
+            flex-direction: column;
+
+            .sid_right {
+                align-items: center;
+                justify-content: center;
+                text-align: centerc;
+            }
+
+            .contact,
+            .sid_right,
+            h2,
+            p,
+            h3 {
+                text-align: center;
+
+                &+ {
+                    hr {
+                        margin: 15px auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+.clients {
+    position: relative;
+    /* تمكين التحكم في عناصر السكشن */
+    background-image: url('../img/adadad.jpg');
+    /* تعيين الصورة الخلفية */
+    background-size: cover;
+    /* تغطية الخلفية كاملة للعنصر */
+    background-repeat: no-repeat;
+    /* عدم تكرار الصورة */
+    background-position: center;
+    /* توسيط الصورة */
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2d4943;
+        /* لون الخلفية الشفافة */
+        opacity: 0.6;
+        /* مستوى الشفافية */
+        z-index: 1;
+        /* تحديد ترتيب الطبقات */
+    }
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 50px 0;
+
+    .sid_left {
+        z-index: 2;
+        width: 50%;
+
+
+
+        h2 {}
+
+        hr {
+            &+p{
+
+                max-width: 80%;
+            }
+        }
+
+        p {}
+
+
+    }
+
+    .sid_right {
+        z-index: 2;
+        width: 50%;
+        transition-duration: .4s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        /* عرض الجزء الأيمن من العنصر */
+        .box {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* لون الخلفية للبوكس مع الشفافية */
+            padding: 15px;
+
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .s-left {
+                    display: flex;
+                    margin-top: 20px;
+
+                    img {
+                        margin-right: 10px;
+                        /* هامش يمين الصورة */
+                        width: 50px;
+                        /* عرض الصورة */
+                        height: 50px;
+                        border-radius: 50%;
+                        /* ارتفاع الصورة */
+                    }
+                }
+
+
+                h3 {
+                    font-size: 14px;
+                    /* حجم العنوان */
+                    font-weight: bold;
+                    /* سماكة العنوان */
+                }
+
+                .p {
+                    font-size: 12px;
+                    /* حجم النص */
+                    letter-spacing: normal;
+                }
+
+                i,
+                svg {
+                    font-size: 24px;
+                    /* حجم الرمز */
+                    color: $m-color;
+                    /* لون الرمز */
+                }
+
+                .icon-quote {
+                    filter: invert(51%) sepia(92%) saturate(3437%) hue-rotate(140deg) brightness(95%) contrast(102%);
+                    width: 18%;
+                    rotate: 180deg;
+                    margin-bottom: -40px;
+                }
+
+
+
+            }
+        }
+    }
+}
+
+@media (max-width:785px) {
+    .clients {
+        .container {
+            flex-direction: column;
+
+            .sid_left {
+                align-items: center;
+                width: 100%;
+
+                * {
+                    align-items: center;
+                    text-align: center;
+
+                }
+
+                .sid_right {
+                    width: 90%;
+                }
+
+                hr                {
+                margin: 15px auto;
+            }
+
+            button {
+                margin: 15px auto;
+                position: relative;
+                right: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .sid_right {
+            z-index: 2;
+            width: 100%;
+            transition-duration: .4s;
+
+            p {
+                text-align: center;
+            }
+
+            padding: 20px;
+
+            .icon-quote {
+                width: 13%;
+            }
+        }
+    }
+}
+}

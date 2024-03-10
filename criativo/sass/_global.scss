@@ -22,9 +22,20 @@
 
 }
 
+html {
+    scroll-behavior: smooth!important;
+}
+
 //body
 body {
     background: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
 }
 
 // global varibal
@@ -66,11 +77,47 @@ p.p {
     line-height: 1.8;
 }
 
+//BTN
+
+button {
+    width: fit-content;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+.button-58 {
+    align-items: center;
+    background-color: $m-color;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0 17px;
+    color: #fff;
+    cursor: pointer;
+    height: 38px;
+    display: inline-flex;
+    min-width: 90px;
+    transition-duration: .4s;
+
+
+    &:focus {
+        color: #171e29;
+    }
+
+    &:hover {
+        background-color: #5cd2b986;
+        border-color: $m-color;
+        fill: $m-color;
+        transition-duration: .4s;
+        transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
+
+    }
+}
+
 /* استهدف الأجهزة التي يكون عرض الشاشة أقل من 600 بكسل */
 @media only screen and (max-width: 600px) {
     .container {
         width: 100%;
-        padding: 10px;
+        padding: 0 10px;
         box-sizing: border-box;
     }
 }
@@ -79,7 +126,7 @@ p.p {
 @media only screen and (min-width: 601px) and (max-width: 900px) {
     .container {
         width: 95%;
-        padding: 5px;
+        padding: 0 5px;
         box-sizing: border-box;
     }
 }
@@ -88,7 +135,7 @@ p.p {
 @media only screen and (min-width: 901px) {
     .container {
         width: 80%;
-        padding: 20px;
+        padding: 0 20px;
         box-sizing: border-box;
     }
 }

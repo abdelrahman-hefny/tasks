@@ -29,39 +29,6 @@
                 margin-top: 15px;
             }
 
-            button {
-                width: fit-content;
-                margin-top: 20px;
-                border-radius: 2px;
-            }
-
-            .button-58 {
-                align-items: center;
-                background-color: $m-color;
-                border: 0;
-                box-sizing: border-box;
-                padding: 0 17px;
-                color: #fff;
-                cursor: pointer;
-                height: 38px;
-                display: inline-flex;
-                min-width: 90px;
-                transition-duration: .4s;
-                margin: auto;
-
-                &:focus {
-                    color: #171e29;
-                }
-
-                &:hover {
-                    background-color: #5cd2b986;
-                    border-color: $m-color;
-                    fill: $m-color;
-                    transition-duration: .4s;
-                    transform: scale(1.05); // تكبير حجم الصندوق عند تحويل الماوس (hover)
-
-                }
-            }
         }
 
         .sid_right {

@@ -1,0 +1,89 @@
+ <section class="fnh">
+
+            <div class="img">
+
+                <div class="img-bn">
+
+                <img src="New folder/IMG-20240308-WA0081.jpg" >
+
+                </div>
+
+                
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0082.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0083.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0085.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0086.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0087.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0089.jpg" >
+
+                </div>
+
+                <div class="img-bn">
+
+                    <img src="New folder/IMG-20240308-WA0090.jpg" >
+
+                </div>
+
+                </div>
+                
+
+           </section>
+
+
+
+
+                                                                    css
+
+
+
+.fnh{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.img{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-bn{
+    width: 20px;
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin-top: 90px;
+}
